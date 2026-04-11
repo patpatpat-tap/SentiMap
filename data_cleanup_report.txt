@@ -1,0 +1,19 @@
+============================================================
+DATA VALIDATION REPORT
+============================================================
+
+Total records: 58
+
+MISSING FIELDS:
+  • ID:          0
+  • Title:       0
+  • Body:        1
+  • Full text:   0
+  • Created date:0
+  • Upvotes:     0
+  • URL:         0
+
+BLANK BODY TEXT: 1
+DUPLICATE IDs: 0
+
+TOTAL ISSUES: 2

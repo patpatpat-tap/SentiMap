@@ -1,0 +1,50 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+.Python
+
+# Node
+node_modules/
+.next/
+out/
+.npm/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables (DON'T commit credentials!)
+.env
+.env.local
+.env.*.local
+
+# Sensitive data
+reddit_data_v2.json
+reddit_data_v2.xlsx
+reddit_data_v2_clean.csv
+*.csv
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp
+.cache/
+.temp/
+
+# Research data (kept locally, not in version control)
+reddit_data_v*.json
