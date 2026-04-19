@@ -6,7 +6,7 @@ Extracts and normalizes location mentions from Cebuano traffic discourse.
 
 import re
 from typing import List, Set
-from cebuano_lexicon import CEBU_LOCATIONS
+from .cebuano_lexicon import CEBU_LOCATIONS
 
 
 class CebuLocationExtractor:

@@ -6,7 +6,7 @@ Combines lexicon-based analysis with sarcasm detection and code-switching awaren
 
 import re
 from typing import Dict, Tuple
-from cebuano_lexicon import (
+from .cebuano_lexicon import (
     NEGATIVE_LEXICON,
     POSITIVE_LEXICON,
     SARCASM_MARKERS,
