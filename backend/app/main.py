@@ -11,13 +11,43 @@ import os
 from dotenv import load_dotenv
 from .sentiment_analyzer import CebuanoSentimentAnalyzer
 from .location_extractor import CebuLocationExtractor
-from .geospatial import cluster_grievances_by_location, get_severity_color
+from .geospatial import CEBU_COORDINATES, cluster_grievances_by_location, get_severity_color
 from .supabase_client import supabase_client
 
 # Load environment variables
 load_dotenv()
 
 app = FastAPI(title="SentiMap API - Supabase")
+
+# Generic locations are too broad for heatmap clustering
+GENERIC_LOCATIONS = {"Cebu City"}
+MIN_LOCATION_CONFIDENCE = 0.7
+
+
+def extract_locations_for_post(post: dict) -> list:
+    text = post.get("full_text") or ""
+    if not text:
+        title = post.get("title") or ""
+        body = post.get("body") or ""
+        comments = post.get("comments_text") or ""
+        text = "\n".join([title, body, comments]).strip()
+
+    if not text:
+        return []
+
+    candidates = location_extractor.extract_with_confidence(text)
+    candidates = [
+        c for c in candidates
+        if c["confidence"] >= MIN_LOCATION_CONFIDENCE and c["location"] in CEBU_COORDINATES
+    ]
+    if not candidates:
+        return []
+
+    top_location = candidates[0]["location"]
+    if top_location in GENERIC_LOCATIONS:
+        return []
+
+    return [top_location]
 
 # Initialize NLP modules
 sentiment_analyzer = CebuanoSentimentAnalyzer()
@@ -48,6 +78,9 @@ def get_heatmap():
         
         # Fetch all posts from Supabase
         posts = supabase_client.get_all_posts()
+
+        # Only use validated posts
+        posts = [p for p in posts if p.get("is_clean") is True]
         
         if not posts:
             return {
@@ -58,26 +91,22 @@ def get_heatmap():
                 "zoom": 12
             }
         
-        # Enrich with NLP if not already done
+        # Use pre-computed NLP/locations from Supabase
         data_records = []
         for post in posts:
+            locations = extract_locations_for_post(post)
+
             record = {
                 "title": post.get("title", ""),
                 "upvotes": post.get("upvotes", 0),
                 "comments": post.get("num_comments", 0),
-                "locations": post.get("locations", "").split(",") if post.get("locations") else []
+                "locations": locations,
             }
-            
-            # If locations not yet extracted, extract them now
-            if not record["locations"]:
-                text = post.get("full_text", post.get("title", ""))
-                record["locations"] = location_extractor.extract(text)
-            
-            # Analyze sentiment
-            sentiment = sentiment_analyzer.analyze(post.get("full_text", post.get("title", "")))
-            record["sentiment_score"] = sentiment["sentiment_score"]
-            record["sentiment_label"] = sentiment["sentiment_label"]
-            record["sarcasm_detected"] = sentiment["sarcasm_detected"]
+
+            # Precomputed sentiment fields (fallback to neutral if missing)
+            record["sentiment_score"] = post.get("sentiment_score", 0.0)
+            record["sentiment_label"] = post.get("sentiment_label", "neutral")
+            record["sarcasm_detected"] = post.get("sarcasm_detected", False)
             
             data_records.append(record)
         
@@ -91,6 +120,7 @@ def get_heatmap():
                 "location": location,
                 "coords": cluster_data["coords"],
                 "count": cluster_data["count"],
+                "sarcasm_count": cluster_data.get("sarcasm_count", 0),
                 "avg_sentiment": cluster_data["avg_sentiment"],
                 "severity_color": cluster_data["severity_color"],
                 "radii": cluster_data["radii"],
@@ -127,14 +157,19 @@ def get_raw_data():
         
         # Fetch all posts from Supabase
         posts = supabase_client.get_all_posts()
+
+        # Only use validated posts
+        posts = [p for p in posts if p.get("is_clean") is True]
         
         if not posts:
             print("⚠ No posts found in Supabase")
             return {"status": "success", "data": []}
         
-        # Enrich with NLP processing
+        # Use pre-computed NLP fields from Supabase
         data_records = []
         for post in posts:
+            locations = extract_locations_for_post(post)
+
             record = {
                 "id": post.get("id"),
                 "title": post.get("title", ""),
@@ -146,17 +181,14 @@ def get_raw_data():
                 "url": post.get("url", ""),
                 "comments_text": post.get("comments_text", ""),
                 "is_relevant": post.get("is_relevant", True),
+                "is_clean": post.get("is_clean", False),
             }
-            
-            # Sentiment Analysis
-            sentiment = sentiment_analyzer.analyze(record["full_text"])
-            record["sentiment_score"] = sentiment["sentiment_score"]
-            record["sentiment_label"] = sentiment["sentiment_label"]
-            record["sarcasm_detected"] = sentiment["sarcasm_detected"]
-            record["sentiment_confidence"] = sentiment["confidence"]
-            
-            # Location Extraction
-            locations = location_extractor.extract(record["full_text"])
+
+            # Precomputed sentiment + location fields
+            record["sentiment_score"] = post.get("sentiment_score", 0.0)
+            record["sentiment_label"] = post.get("sentiment_label", "neutral")
+            record["sarcasm_detected"] = post.get("sarcasm_detected", False)
+            record["sentiment_confidence"] = post.get("sentiment_confidence", 0.0)
             record["locations"] = locations
             
             data_records.append(record)
@@ -191,6 +223,9 @@ def get_statistics():
             return {"status": "error", "message": "Supabase client not initialized"}
         
         posts = supabase_client.get_all_posts()
+
+        # Only use validated posts
+        posts = [p for p in posts if p.get("is_clean") is True]
         
         if not posts:
             return {
@@ -209,27 +244,21 @@ def get_statistics():
         location_sentiment_map = {}
         
         for post in posts:
-            text = post.get("full_text", post.get("title", ""))
-            try:
-                sentiment = sentiment_analyzer.analyze(text)
-                label = sentiment["sentiment_label"]
-                score = sentiment["sentiment_score"]
-                
-                sentiment_labels_count[label] += 1
-                sentiment_scores.append(score)
-                
-                if sentiment["sarcasm_detected"]:
-                    sarcasm_count += 1
-                
-                # Locations with sentiment
-                locations = location_extractor.extract(text)
-                for loc in locations:
-                    if loc not in location_sentiment_map:
-                        location_sentiment_map[loc] = []
-                    location_sentiment_map[loc].append(score)
-            except Exception as e:
-                print(f"[WARNING] Error processing post {post.get('id')}: {e}")
-                continue
+            label = post.get("sentiment_label", "neutral")
+            score = post.get("sentiment_score", 0.0)
+
+            sentiment_labels_count[label] += 1
+            sentiment_scores.append(score)
+
+            if post.get("sarcasm_detected", False):
+                sarcasm_count += 1
+
+            locations = extract_locations_for_post(post)
+
+            for loc in locations:
+                if loc not in location_sentiment_map:
+                    location_sentiment_map[loc] = []
+                location_sentiment_map[loc].append(score)
         
         # Calculate location stats
         location_stats = []

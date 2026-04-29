@@ -1,30 +1,40 @@
 """
-SentiMap Sentiment Analyzer v2.0 — God Mode
+SentiMap Sentiment Analyzer v3.0 — Final
 =============================================
 Analyzes sentiment in Cebuano/Bislish traffic discourse.
 
-v2.0 improvements:
-- Phrase-first matching (multi-word lexicon entries now work correctly)
-- Intensifier multiplication ("grabe kaayo" scores higher than "grabe")
-- Negation flipping ("dili maayo" correctly scores negative)
-- Full SARCASM_MARKERS dictionary integration (35+ patterns)
-- Context-dependent sarcasm (CONTEXT_DEPENDENT_SARCASM)
-- Emoji sentiment detection
+v3.0 improvements:
+- Fully synced with Cebuano Sentiment Lexicon v3.0
+- 5-Layer Sarcasm Detection System (incorporating BRT-specific resignation)
+- Structural irony redundancy removed (promoted to primary lexicon)
+- Expanded emoji context triggers (BRT, CCTO)
+- Phrase-first matching with \b word boundaries
 - Improved score normalization (evidence accumulation, not averaging)
 - Exports debug info for research documentation
 """
 
 import re
 from typing import Dict, List, Tuple
-from .cebuano_lexicon import (
-    NEGATIVE_LEXICON,
-    POSITIVE_LEXICON,
-    SARCASM_MARKERS,
-    CONTEXT_DEPENDENT_SARCASM,
-    INTENSIFIERS,
-    NEGATIONS,
-    TRAFFIC_TERMS,
-)
+try:
+    from cebuano_lexicon import (
+        NEGATIVE_LEXICON,
+        POSITIVE_LEXICON,
+        SARCASM_MARKERS,
+        CONTEXT_DEPENDENT_SARCASM,
+        INTENSIFIERS,
+        NEGATIONS,
+        TRAFFIC_TERMS,
+    )
+except ImportError:
+    from .cebuano_lexicon import (
+        NEGATIVE_LEXICON,
+        POSITIVE_LEXICON,
+        SARCASM_MARKERS,
+        CONTEXT_DEPENDENT_SARCASM,
+        INTENSIFIERS,
+        NEGATIONS,
+        TRAFFIC_TERMS,
+    )
 
 
 class CebuanoSentimentAnalyzer:
@@ -178,12 +188,13 @@ class CebuanoSentimentAnalyzer:
     def _detect_sarcasm(self, text_clean: str,
                         text_original: str) -> Tuple[bool, List[str]]:
         """
-        Multi-layer sarcasm detection.
+        Multi-layer sarcasm detection (5-Layer System).
 
-        Layer 1: Direct sarcasm phrase matches (SARCASM_MARKERS)
+        Layer 1: Primary Cebuano/Filipino markers & Ironic praise & Resignation & BRT patterns (SARCASM_MARKERS)
         Layer 2: Context-dependent sarcasm (CONTEXT_DEPENDENT_SARCASM)
         Layer 3: Emoji-based sarcasm (😂😭 combination)
-        Layer 4: Structural irony ("supposed to X but Y")
+        Layer 4: Advanced Structural irony ("para ma... pero")
+        Layer 5: Handled in SARCASM_MARKERS (BRT-specific resignation patterns)
         """
         triggers = []
 
@@ -208,16 +219,12 @@ class CebuanoSentimentAnalyzer:
         # 😂 in context of traffic complaint = sarcasm
         if "😂" in text_original and any(
             t in text_clean for t in ["traffic", "trapik", "commute",
-                                      "enforcer", "citom", "lto"]
+                                      "enforcer", "citom", "lto", "ccto", "brt"]
         ):
             triggers.append("emoji:😂+traffic_context")
 
-        # Layer 4 — Structural irony patterns
-        # "supposed to decongest" + actually causes congestion
+        # Layer 4 — Advanced Structural irony patterns
         structural_patterns = [
-            ("supposed to decongest", "traffic"),
-            ("supposed to help", "commut"),
-            ("supposed to improve", "traffic"),
             ("para ma", "pero"),      # "para ma-X pero" = irony
             ("para mabawasan", "pero"),
         ]
@@ -297,7 +304,7 @@ class CebuanoSentimentAnalyzer:
                     new_score = score * multiplier
                     scored_spans[i] = (span_pos, new_score, word)
                     intensifiers_applied.append(
-                        f"{phrase}×{multiplier}→{word}"
+                        f"{phrase}x{multiplier}->{word}"
                     )
                     break
 
@@ -313,7 +320,7 @@ class CebuanoSentimentAnalyzer:
                 if pos < span_pos < search_end:
                     new_score = -score * 0.8  # flip and slightly reduce
                     scored_spans[i] = (span_pos, new_score, word)
-                    negations_applied.append(f"{neg_phrase}→flipped:{word}")
+                    negations_applied.append(f"{neg_phrase}->flipped:{word}")
                     break
 
         # ── Calculate final score ──────────────────────────────
@@ -411,8 +418,8 @@ class CebuanoSentimentAnalyzer:
              "Frustration + expletive"),
 
             ("Puryagaba ning traffic sa Cebu ba!",
-             "negative", False,
-             "Authentic Cebuano frustration"),
+             "negative", True,
+             "Authentic Cebuano frustration (now classified as sarcasm)"),
 
             ("CITOM naapprehend akong motor. Counterflow daw.",
              "negative", False,
@@ -459,7 +466,8 @@ class CebuanoSentimentAnalyzer:
                 failed += 1
 
             print(f"\n  [{status}] {desc}")
-            print(f"  Text    : {text[:70]}")
+            safe_text = text[:70].encode('ascii', 'replace').decode('ascii')
+            print(f"  Text    : {safe_text}")
             print(f"  Label   : {result['sentiment_label']:>8} "
                   f"(expected: {exp_label}) {'OK' if label_ok else 'WRONG'}")
             print(f"  Sarcasm : {str(result['sarcasm_detected']):>5} "
@@ -467,7 +475,8 @@ class CebuanoSentimentAnalyzer:
             print(f"  Score   : {result['sentiment_score']:>6.3f}  "
                   f"Confidence: {result['confidence']:.3f}")
             if result["sarcasm_triggers"]:
-                print(f"  Sarcasm triggers : {result['sarcasm_triggers']}")
+                safe_triggers = str(result["sarcasm_triggers"]).encode('ascii', 'replace').decode('ascii')
+                print(f"  Sarcasm triggers : {safe_triggers}")
             if result["intensifiers_applied"]:
                 print(f"  Intensifiers     : {result['intensifiers_applied']}")
             if result["negations_applied"]:

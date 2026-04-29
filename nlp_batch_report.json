@@ -1,0 +1,1804 @@
+{
+  "generated_at": "2026-04-28T22:03:21.390785",
+  "total_posts": 180,
+  "sentiment_counts": {
+    "positive": 24,
+    "neutral": 16,
+    "negative": 140
+  },
+  "avg_sentiment_score": -0.4819,
+  "sarcasm_count": 42,
+  "sarcasm_percentage": 23.3,
+  "intensifier_hits": 59,
+  "negation_hits": 44,
+  "sarcasm_examples": [
+    {
+      "id": "117s2di",
+      "title": "Street Parking woes",
+      "score": -0.3566,
+      "triggers": [
+        "context:unta+maayo"
+      ]
+    },
+    {
+      "id": "11mcneo",
+      "title": "Jeepney Phaseout topic studies",
+      "score": -0.3163,
+      "triggers": [
+        "marker:very efficient",
+        "marker:char"
+      ]
+    },
+    {
+      "id": "14gc59o",
+      "title": "Is it me or and Cebu BRT kay counterproductive?",
+      "score": -1.0,
+      "triggers": [
+        "marker:counterproductive"
+      ]
+    },
+    {
+      "id": "16d3uuw",
+      "title": "Sidewalks sa Metro Cebu",
+      "score": -0.8434,
+      "triggers": [
+        "context:unta+maayo"
+      ]
+    },
+    {
+      "id": "17kgjo3",
+      "title": "SRP",
+      "score": -0.611,
+      "triggers": [
+        "structural:para ma"
+      ]
+    },
+    {
+      "id": "19bb7oj",
+      "title": "Motorcycle clubs nga dli resing2x permi?",
+      "score": -0.7682,
+      "triggers": [
+        "context:enjoy+traffic"
+      ]
+    },
+    {
+      "id": "1an6ipj",
+      "title": "Cebu BRT Package 2",
+      "score": -0.4917,
+      "triggers": [
+        "structural:para ma"
+      ]
+    },
+    {
+      "id": "1b6zv7t",
+      "title": "Poya jud aning mga Politiko sa Cebu oy",
+      "score": -0.704,
+      "triggers": [
+        "marker:ang galing",
+        "marker:galing"
+      ]
+    },
+    {
+      "id": "1cb9wdz",
+      "title": "Tiger tours van nga road rager ang driver.",
+      "score": -1.0,
+      "triggers": [
+        "structural:para ma"
+      ]
+    },
+    {
+      "id": "1csdxm2",
+      "title": "Ako lang ba maglagot sa mga reckless puv drivers, et al?",
+      "score": -0.9624,
+      "triggers": [
+        "structural:para ma"
+      ]
+    },
+    {
+      "id": "1dawqox",
+      "title": "Okay ra mupuyo sa casili consolacion?",
+      "score": -0.7703,
+      "triggers": [
+        "context:dba+traffic"
+      ]
+    },
+    {
+      "id": "1dhvtdf",
+      "title": "Gi kapoy nakog commute",
+      "score": -1.0,
+      "triggers": [
+        "marker:sana all",
+        "marker:char"
+      ]
+    },
+    {
+      "id": "1dipfza",
+      "title": "jeep modernization pero way disiplina",
+      "score": -0.9107,
+      "triggers": [
+        "context:unta+tarong"
+      ]
+    },
+    {
+      "id": "1elmdoi",
+      "title": "Lately murag daghan bastos na taxi driver",
+      "score": -0.6504,
+      "triggers": [
+        "marker:sana all"
+      ]
+    },
+    {
+      "id": "1fmemma",
+      "title": "“Skin Clinic”-kuno Scam in Cebu",
+      "score": -0.7499,
+      "triggers": [
+        "marker:char"
+      ]
+    },
+    {
+      "id": "1g3x3k0",
+      "title": "Random Drug Test for PUJ/MPUJ Drivers ",
+      "score": -0.4,
+      "triggers": [
+        "marker:galing"
+      ]
+    },
+    {
+      "id": "1g5k4a2",
+      "title": "Peeves about modern jeepney services",
+      "score": -0.9456,
+      "triggers": [
+        "marker:char"
+      ]
+    },
+    {
+      "id": "1gf17fu",
+      "title": "Just found out about Grab drivers rating customers",
+      "score": -0.4,
+      "triggers": [
+        "marker:mao ni"
+      ]
+    },
+    {
+      "id": "1i930dp",
+      "title": "Niingon ang News: \"Makikipot at daming liko-liko kaya mahirapan maglagay ng elevated railways ang Cebu kaya Subway ang option\"",
+      "score": -0.9936,
+      "triggers": [
+        "marker:another paasa",
+        "marker:paasa na pod",
+        "marker:EXCUSE ra"
+      ]
+    },
+    {
+      "id": "1ibseyw",
+      "title": "Way lain bait para sa election diri sa Cebu? Cge ra brought up ug transport system?",
+      "score": -0.9982,
+      "triggers": [
+        "marker:balik balik",
+        "marker:bla bla bla"
+      ]
+    }
+  ],
+  "all_results": [
+    {
+      "id": "995zus",
+      "title": "jaywalking",
+      "sentiment_score": -0.3949,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "bth4rl",
+      "title": "Naa bay Traffic Court diri sa Cebu?",
+      "sentiment_score": -0.9532,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "czhj6h",
+      "title": "DOTr, OPAV say Cebu BRT route expanded, improved --- BRT Phase 1 will cover the 13.83-kilometer line from SRP to IT Park. The feeder services from IT Park to Talamban (5.68 km), Talisay to Mambaling (7.55 km), and Talisay to SRP (7.36 km) will also be part of the phase 1.",
+      "sentiment_score": 0.6452,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City, IT Park, Mambaling, SRP (South Road Properties), Talamban, Talisay City"
+    },
+    {
+      "id": "oye4x8",
+      "title": "Cycling to Cebu City from Talisay (Checkpoints?)",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City, Talisay City"
+    },
+    {
+      "id": "qbblae",
+      "title": "Cebu Horror Stories for October 2021 - Thread 2",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City, Mandaue City"
+    },
+    {
+      "id": "10zbyob",
+      "title": "Nagkawalay dignidad ang pagcommute sa Cebu?",
+      "sentiment_score": -0.3861,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "116ia2b",
+      "title": "Help, pls! Commute to Talisay from Cebu/Mandaue.",
+      "sentiment_score": 0.4196,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City, Mandaue City, Pier Area, Talisay City"
+    },
+    {
+      "id": "117s2di",
+      "title": "Street Parking woes",
+      "sentiment_score": -0.3566,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.5,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "11hv1zk",
+      "title": "Been stuck in traffic sa SRP for more 2 hours on the way to Seaside. Gitan-aw nako Waze kung nganong trapik kaayo and saw this posted by a Wazer sa may Gaisano Capital SRP. Anyone from the area know why is this happening? Don't think it's because sa SM2SM Run tomorrow.",
+      "sentiment_score": -0.6899,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Gaisano, SM Seaside, SRP (South Road Properties)"
+    },
+    {
+      "id": "11mcneo",
+      "title": "Jeepney Phaseout topic studies",
+      "sentiment_score": -0.3163,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "11x8u5q",
+      "title": "Difference of Cebu or Cebuano culture from other places/countries",
+      "sentiment_score": 0.8769,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Ayala (Business District), Cebu City"
+    },
+    {
+      "id": "13tv60j",
+      "title": "Traffic in Cebu Province",
+      "sentiment_score": -0.8123,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "14d8642",
+      "title": "Multiple daily motorcycle accidents all around Cebu",
+      "sentiment_score": -0.9659,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "14gc59o",
+      "title": "Is it me or and Cebu BRT kay counterproductive?",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "15dgfbk",
+      "title": "Tampered Taxi Meters",
+      "sentiment_score": -0.9222,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "15tqjjv",
+      "title": "I need an advice. (Maybe legal)",
+      "sentiment_score": 0.6563,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "167ajap",
+      "title": "RANT: Ngano palisuray mang-book ug pagsugat sa rider sa Angkas ug Move It sa Mactan Airport?",
+      "sentiment_score": -0.6122,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Cebu City, Mactan"
+    },
+    {
+      "id": "16d3uuw",
+      "title": "Sidewalks sa Metro Cebu",
+      "sentiment_score": -0.8434,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Ayala (Business District), Cebu City, Fuente Osmeña, IT Park"
+    },
+    {
+      "id": "16tduaz",
+      "title": "Beep operations to stop operations starting October 1",
+      "sentiment_score": -0.5085,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Carbon Market, Cebu City, Guadalupe"
+    },
+    {
+      "id": "17kgjo3",
+      "title": "SRP",
+      "sentiment_score": -0.611,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.95,
+      "locations": "Cebu City, SM Seaside, SRP (South Road Properties)"
+    },
+    {
+      "id": "18agov1",
+      "title": "Cebu parking concerns",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "18c01az",
+      "title": "What are the worst managed cities ?",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "18msl2k",
+      "title": "Cebu City traffic: Why is it a perennial problem? - CDN",
+      "sentiment_score": -0.943,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "18p10ym",
+      "title": "Kamusta naman ang traffic sa one way scheme?",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Unknown"
+    },
+    {
+      "id": "18sin2n",
+      "title": "Jeep Modernization",
+      "sentiment_score": -0.7839,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Cebu City, Talisay City"
+    },
+    {
+      "id": "19408pw",
+      "title": "Shutdown BRT?",
+      "sentiment_score": -0.4348,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "196azdx",
+      "title": "Skyways in Cebu",
+      "sentiment_score": -0.7393,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.9,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "19ac7k3",
+      "title": "Jeepney Route List",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "19bb7oj",
+      "title": "Motorcycle clubs nga dli resing2x permi?",
+      "sentiment_score": -0.7682,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.8,
+      "locations": "Apas, Cebu City"
+    },
+    {
+      "id": "1agukmi",
+      "title": "Traffic Violation",
+      "sentiment_score": -0.1887,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "SRP (South Road Properties)"
+    },
+    {
+      "id": "1ahf71h",
+      "title": "Double-decker buses like Singapore to traverse CBRT route",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1an6ipj",
+      "title": "Cebu BRT Package 2",
+      "sentiment_score": -0.4917,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.5,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1b6723q",
+      "title": "Cebu BRT Design Reveal",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1b6emle",
+      "title": "PNP checkpoint innodata area",
+      "sentiment_score": 0.6452,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City, Mandaue City"
+    },
+    {
+      "id": "1b6zv7t",
+      "title": "Poya jud aning mga Politiko sa Cebu oy",
+      "sentiment_score": -0.704,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1badwiz",
+      "title": "Hapit ko na kulatahan sa jeepney driver ",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Liloan"
+    },
+    {
+      "id": "1bd3cz2",
+      "title": "Another road closure coming",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1bkkgpr",
+      "title": "Commute to Cebu Doc",
+      "sentiment_score": -0.1993,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Basak, Cebu City, Pardo"
+    },
+    {
+      "id": "1bwdy9c",
+      "title": "What happens if you ignore your traffic citation ticket?",
+      "sentiment_score": 0.1976,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Mandaue City"
+    },
+    {
+      "id": "1c1hjci",
+      "title": "Call me weird, but..",
+      "sentiment_score": -0.5001,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1c52qrw",
+      "title": "Ngano wala pay Number Coding sa Cebu na perti namang Traffika?",
+      "sentiment_score": -0.331,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1cb9wdz",
+      "title": "Tiger tours van nga road rager ang driver.",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1ce35gy",
+      "title": "Today I experienced the importance sa dashcam",
+      "sentiment_score": -0.5288,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Talisay City"
+    },
+    {
+      "id": "1cf2bwt",
+      "title": "Worst experience in MCIA T1 last night",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1crdhw6",
+      "title": "I have an idea for a local ordinance or even a Law. Wachu think? ",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1csdxm2",
+      "title": "Ako lang ba maglagot sa mga reckless puv drivers, et al?",
+      "sentiment_score": -0.9624,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1cuykiu",
+      "title": "Traffic Violations Bureau Cebu City Location and Office Hours",
+      "sentiment_score": -0.7985,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City, SRP (South Road Properties)"
+    },
+    {
+      "id": "1cxsqae",
+      "title": "Some taxi drivers in Cebu are the worst taxi drivers? ",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Cebu City, Pier Area"
+    },
+    {
+      "id": "1d9438f",
+      "title": "Wala nay traffic inig ka gabii (or so I thought)",
+      "sentiment_score": -0.4563,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.9,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1da8x3z",
+      "title": "Cebu City Traffic Office VIOLATION FEE???",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City, SRP (South Road Properties)"
+    },
+    {
+      "id": "1dawqox",
+      "title": "Okay ra mupuyo sa casili consolacion?",
+      "sentiment_score": -0.7703,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Consolacion, Mandaue City, Minglanilla"
+    },
+    {
+      "id": "1dhvtdf",
+      "title": "Gi kapoy nakog commute",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1dipfza",
+      "title": "jeep modernization pero way disiplina",
+      "sentiment_score": -0.9107,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1dn4d4s",
+      "title": "I don't get all the hate the Cebu BRT is getting",
+      "sentiment_score": -0.9609,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1dq4wrg",
+      "title": "City’s pedestrianization project to start this year",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Carbon Market, Cebu City, Colon Street, Guadalupe"
+    },
+    {
+      "id": "1dqqf9b",
+      "title": "Cebu transportation office ",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1ec9cxu",
+      "title": "Magpark gihapon sa sidewalks!",
+      "sentiment_score": 0.3167,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City, Osmeña Boulevard"
+    },
+    {
+      "id": "1elmdoi",
+      "title": "Lately murag daghan bastos na taxi driver",
+      "sentiment_score": -0.6504,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.8,
+      "locations": "Cebu City, Labangon"
+    },
+    {
+      "id": "1eylxqd",
+      "title": "POSSIBLE MODUS SA MOVE IT",
+      "sentiment_score": 0.7087,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1f9t1p6",
+      "title": "Aircon na bus - di nako keri ang baho",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1fadko0",
+      "title": "Ngano daghan magbash sa brt sa cebu?",
+      "sentiment_score": 0.8439,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1fft5mf",
+      "title": "I.T. Park Newtown Bus overloading ",
+      "sentiment_score": -0.5228,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "IT Park"
+    },
+    {
+      "id": "1fhc7c5",
+      "title": "Naa napud diay problema giatubang ang Cebu BRT?",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1fmemma",
+      "title": "“Skin Clinic”-kuno Scam in Cebu",
+      "sentiment_score": -0.7499,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Apas, Ayala (Business District), Cebu City, IT Park"
+    },
+    {
+      "id": "1frblsx",
+      "title": "dyos miyo ang traffic sa consolacion",
+      "sentiment_score": -0.6782,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Cebu City, Consolacion, Mandaue City"
+    },
+    {
+      "id": "1ftvz7o",
+      "title": "MAHADLOK KOS AKONG KINABUHI",
+      "sentiment_score": -0.9735,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1fy3i7h",
+      "title": "Gimingaw kog Cebu bisag trapik",
+      "sentiment_score": -0.5103,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Cebu City, Mandaue City"
+    },
+    {
+      "id": "1fy6k49",
+      "title": "Helmet sa Move it Rider",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1g3x3k0",
+      "title": "Random Drug Test for PUJ/MPUJ Drivers ",
+      "sentiment_score": -0.4,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.65,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1g5k4a2",
+      "title": "Peeves about modern jeepney services",
+      "sentiment_score": -0.9456,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.8,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1g7q86i",
+      "title": "What can we do sa mga Premature Campaigners, especially anang mga tarps sa dalan?",
+      "sentiment_score": -0.9157,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Mandaue City"
+    },
+    {
+      "id": "1g7my74",
+      "title": "Mag Grab or mag Rent-a-Car?",
+      "sentiment_score": 0.1435,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1gf17fu",
+      "title": "Just found out about Grab drivers rating customers",
+      "sentiment_score": -0.4,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1gmztsg",
+      "title": "Road Narrowing sa Osmeña Blvd",
+      "sentiment_score": -0.8821,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Osmeña Boulevard"
+    },
+    {
+      "id": "1gpwriz",
+      "title": "Any government employees aware of the reason for this?",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1gty6tf",
+      "title": "Ocean Park to Safari best mode of transpo",
+      "sentiment_score": 0.8824,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City, SM Seaside"
+    },
+    {
+      "id": "1gzb312",
+      "title": "BRT station roof in N Bacalso, Cebu City damaged",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City, N. Bacalso Avenue"
+    },
+    {
+      "id": "1h61f23",
+      "title": "Mayor Garcia wants Cebu City to be walkable, less reliant on cars",
+      "sentiment_score": -0.8413,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1h8i7ui",
+      "title": "Cebu City Transportation Office (CCTO) changes uniforms again",
+      "sentiment_score": -0.7985,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1h9b9cy",
+      "title": "TIL Cebu BRT contractor Hunan Road and Bridge Construction was blacklisted by DPWH circa 2004",
+      "sentiment_score": -0.9982,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1hfauq9",
+      "title": "Why don't PUV/Jeepneys have central controllers, like taxis do?",
+      "sentiment_score": -0.8271,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1hiiw5g",
+      "title": "What would you live in Consolacion knowing you work in the City",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Consolacion, Liloan, Mandaue City"
+    },
+    {
+      "id": "1hj1p1k",
+      "title": "Indrive is not bring competition to grab in cebu its aiding in keeping prices high",
+      "sentiment_score": -0.7692,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Ayala (Business District), Cebu City, Mabolo"
+    },
+    {
+      "id": "1hkb3b1",
+      "title": "Newsfeed full of reckless driving this peak passenger season ",
+      "sentiment_score": -0.7692,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1htoq4n",
+      "title": "GUADALUPE TRANSPORTATION ",
+      "sentiment_score": -0.8157,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City, Guadalupe"
+    },
+    {
+      "id": "1i0532m",
+      "title": "TAXI DRIVER CAUGHT RED HANDED ADJUSTING THE TAXI METER",
+      "sentiment_score": 0.5754,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Cebu City, Lahug, Mandaue City"
+    },
+    {
+      "id": "1i2u4ys",
+      "title": "Cebu BRT back on track?",
+      "sentiment_score": 0.3453,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Capitol Site, Cebu City"
+    },
+    {
+      "id": "1i6dv03",
+      "title": "Angkas or any MC Taxi from Temple of Leah",
+      "sentiment_score": -0.7105,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1i930dp",
+      "title": "Niingon ang News: \"Makikipot at daming liko-liko kaya mahirapan maglagay ng elevated railways ang Cebu kaya Subway ang option\"",
+      "sentiment_score": -0.9936,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1ibseyw",
+      "title": "Way lain bait para sa election diri sa Cebu? Cge ra brought up ug transport system?",
+      "sentiment_score": -0.9982,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1idbl6p",
+      "title": "Traffic for who? Wa may pulos.",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1ih4yyx",
+      "title": "Work on CBRT project progresses",
+      "sentiment_score": 0.8075,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.9,
+      "locations": "Capitol Site, Cebu City, Lahug, Mambaling, N. Bacalso Avenue, SRP (South Road Properties), Talamban"
+    },
+    {
+      "id": "1io3ctq",
+      "title": "Transpo na mu allow ug furbaby?",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1ip4mdo",
+      "title": "Mandaue adopts AI traffic system to ease congestion",
+      "sentiment_score": -0.8737,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City, Consolacion, Mandaue City"
+    },
+    {
+      "id": "1isf0ei",
+      "title": "Cebu City to push through with underground cabling",
+      "sentiment_score": 0.7655,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Cebu City, Fuente Osmeña, Mabolo, Osmeña Boulevard, SRP (South Road Properties)"
+    },
+    {
+      "id": "1ivvm62",
+      "title": "had a terrible experience with Angkas today.",
+      "sentiment_score": -0.9672,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Ayala (Business District), Fuente Osmeña, Gorordo Avenue, Mabolo"
+    },
+    {
+      "id": "1j0nylf",
+      "title": "\"Farmer ko Sir\": LTO 7, PNP to file charges against a motorcycle rider for carrying a concealed knife.",
+      "sentiment_score": -0.2752,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.65,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1j1nnzj",
+      "title": "Moveit vs. Angkas riders here sa Cebu",
+      "sentiment_score": -0.3305,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1j34ird",
+      "title": "Questions abt Living in Cebu",
+      "sentiment_score": -0.9659,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City, Fuente Osmeña, Mandaue City"
+    },
+    {
+      "id": "1j3v8ch",
+      "title": "Ako rabay cringe kaayo aning mga tao sa fb na halos tanan nag vlogger?",
+      "sentiment_score": -0.4,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.95,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1j8re5g",
+      "title": "30 Y/O male na dili kibalo mo bike or motorcycle depressing na kaayo para sa akoa insecure ko's akong mga friends enjoying their life riding scooters having long rides going into nice places etc.",
+      "sentiment_score": -0.1604,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.65,
+      "locations": "Capitol Site, Cebu City"
+    },
+    {
+      "id": "1jcll6d",
+      "title": "Kuyaw kaayo mga cheaters",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.8,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1jikc7c",
+      "title": "Tulis adto sa mga taxi drivers nidaghan na balik (under reported sa media)",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1jndqr3",
+      "title": "Guys sa kadaghan nag vehicle s sa Cebu ba. Car owner's and gun holder's unsaon pag taas sa pasensya para malikayan ang road rage?",
+      "sentiment_score": 0.6242,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1k88ed6",
+      "title": "At*y manang himoog extension ang kalsada oi",
+      "sentiment_score": -0.8251,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1k865zd",
+      "title": "CITOM Citation Question",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "SRP (South Road Properties)"
+    },
+    {
+      "id": "1kje42u",
+      "title": "I miss you Cebu but kakapoy nimo",
+      "sentiment_score": -0.7205,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1kn9mtc",
+      "title": "Grab Food Delivery riders",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1kru1lm",
+      "title": "Driving Lesson hehehe",
+      "sentiment_score": 0.7017,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Mandaue City, Talisay City"
+    },
+    {
+      "id": "1kus3j2",
+      "title": "Taxi Drivers nga mga gwapo",
+      "sentiment_score": 0.5094,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.9,
+      "locations": "Cebu City, Mandaue City, Talisay City"
+    },
+    {
+      "id": "1kuvssb",
+      "title": "Golden Taxi sa SM city",
+      "sentiment_score": -0.6272,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1kvzf4m",
+      "title": "Why is the Tram system not prioritized by govt?",
+      "sentiment_score": -0.4719,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.8,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1l5l6lb",
+      "title": "Naratol slight ang ubang pasahero",
+      "sentiment_score": -0.9353,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1l5a2ub",
+      "title": "Almost died while commuting in SRP Seaside yesterday due to heavy rain.",
+      "sentiment_score": 0.3571,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City, SM Seaside, SRP (South Road Properties)"
+    },
+    {
+      "id": "1l6oiq8",
+      "title": "mini bus kamote drivers",
+      "sentiment_score": -0.4196,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1lbs9le",
+      "title": "Kadaghan kamote sa cebu waman takos bukid",
+      "sentiment_score": -0.8411,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Cebu City, Mandaue City"
+    },
+    {
+      "id": "1lgh37u",
+      "title": "Rampant overcharging and unregulated taxi meters. LTO what are you doing??",
+      "sentiment_score": -0.9751,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City, SM City Cebu, Urgello"
+    },
+    {
+      "id": "1lgrq3k",
+      "title": "Gilaay ko karun ari sa balay maong ako gradohan tanang route sa jeep diri sa syudad...",
+      "sentiment_score": -0.4951,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Ayala (Business District), Bulacao, Carbon Market, Cebu City, Colon Street, Escario Street, Fuente Osmeña, Liloan, Mabolo, Pardo, Pier Area, Urgello"
+    },
+    {
+      "id": "1lgzqpe",
+      "title": "beware sa GrabTaxi drivers",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.95,
+      "locations": "Capitol Site"
+    },
+    {
+      "id": "1lhzqf1",
+      "title": "Commuting from Pier 4",
+      "sentiment_score": -0.4322,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.65,
+      "locations": "Cebu City, Liloan, Minglanilla, Pier Area, Robinsons Place"
+    },
+    {
+      "id": "1lo6cn7",
+      "title": "Pisteng Yawa nga Commute system",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1lqp1ol",
+      "title": "Traffic Enforcer pabor2",
+      "sentiment_score": -0.9436,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Basak"
+    },
+    {
+      "id": "1lrb8jd",
+      "title": "World Bank warns PH officials over slow progress of Cebu BRT",
+      "sentiment_score": 0.8383,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Capitol Site, Cebu City"
+    },
+    {
+      "id": "1lubyst",
+      "title": "Godsend jud Angkas/Moveit/Maxim dire sa Cebu City",
+      "sentiment_score": 0.4348,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1m765vt",
+      "title": "PH Traffic enforcement authorities praised in r/Vietnam in recent video showing I-Act apprehending motorists",
+      "sentiment_score": -0.6484,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.8,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1mrsg4o",
+      "title": "Heavy Traffic Consolacion to Mandaue",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.9,
+      "locations": "Cebu City, Consolacion, Mandaue City"
+    },
+    {
+      "id": "1n40clt",
+      "title": "Fatal SRP Crash: 2 Dead, Truck Driver still detained",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City, SRP (South Road Properties)"
+    },
+    {
+      "id": "1n69r4e",
+      "title": "Cebu Jeepney Routes (AI assisted)",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "A.S. Fortuna Street, Apas, Ayala (Business District), Banawa, Basak, Bulacao, Busay, Capitol Site, Carbon Market, Cebu City, Colon Street, Consolacion, Escario Street, Fuente Osmeña, Gaisano, Gorordo Avenue, Guadalupe, IT Park, Juan Luna Street, Labangon, Lahug, Liloan, Mabolo, Mactan, Magallanes Street, Mambaling, Mandaue City, Minglanilla, N. Bacalso Avenue, Osmeña Boulevard, Pardo, Pier Area, Robinsons Place, SM City Cebu, Salinas Drive, Subangdaku, Talamban, Talisay City, Transcentral Highway, Urgello"
+    },
+    {
+      "id": "1n7c34q",
+      "title": "Finally gi no left turn na ang SRP intersections starting tomorrow, Sept 4",
+      "sentiment_score": 0.6221,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "SRP (South Road Properties)"
+    },
+    {
+      "id": "1na6831",
+      "title": "Carpool South to Cebu City",
+      "sentiment_score": -0.8552,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Apas, Cebu City"
+    },
+    {
+      "id": "1nfufxv",
+      "title": "Bag-ong CCTO rule sa bus stop?",
+      "sentiment_score": -0.775,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.8,
+      "locations": "Bulacao, Cebu City, Pardo"
+    },
+    {
+      "id": "1nhnzg5",
+      "title": "No plate no travel in Cebu",
+      "sentiment_score": -0.9799,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1njggt1",
+      "title": "Stricter rules, bigger frustrations?",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1nl6mtf",
+      "title": "Daghan og yawyaw sa BRT",
+      "sentiment_score": -0.851,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1nkphv6",
+      "title": "BRT is now on Test Run after 30 years planning to Test Run",
+      "sentiment_score": -0.4,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.35,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1nrlaoi",
+      "title": "Traffic Light eskina Cabancalan, Talamban, Cebu City: SAMOT KA TRAFFIC",
+      "sentiment_score": -0.9816,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Cebu City, Talamban"
+    },
+    {
+      "id": "1nte0bo",
+      "title": "Experience nako sa modern jeep",
+      "sentiment_score": -0.8004,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.95,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1o2xj71",
+      "title": "LTO pickup car reckless driving",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1o3hjze",
+      "title": "My Journey Getting a New Driver’s License in Cebu",
+      "sentiment_score": -0.2367,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City, Robinsons Place, Talisay City"
+    },
+    {
+      "id": "1o3p3tt",
+      "title": "Driving in Cebu is not for the Weak!",
+      "sentiment_score": -0.9253,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City, Fuente Osmeña"
+    },
+    {
+      "id": "1o4o31j",
+      "title": "Grab Car Driver Awareness!",
+      "sentiment_score": -0.6895,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1odsnaa",
+      "title": "Urban Legends / Horror Stories in Cebu",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1orh731",
+      "title": "ANIMAL CRUELTY in Sto. Niño Church - 11/08/2025, 6:40 AM",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1otjzh4",
+      "title": "Ngano maning Angkas?",
+      "sentiment_score": -0.6452,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1ov05wt",
+      "title": "Kanang mga sakyanan or motor na magpasutoy og dagan sa Pedestrian Lane lamia ninyo pitlukon",
+      "sentiment_score": -0.5206,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1out6ek",
+      "title": "Is it allowed d mufollow ang politician's car sa traffic rules??? Walay police escort.",
+      "sentiment_score": -0.7927,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1p9mjfs",
+      "title": "Grabe na kaayo ang Internet addiction karong panahuna",
+      "sentiment_score": -0.6452,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1paifdw",
+      "title": "Beware of sketchy citoms near the stoplight around Mandaue sports center/after Mandani bay to Lapu2!",
+      "sentiment_score": -0.6039,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.95,
+      "locations": "Mandaue City"
+    },
+    {
+      "id": "1pdpoy5",
+      "title": "Nanaghan lage ron roadside accident labi na aris mandaue kada buntag",
+      "sentiment_score": -0.9459,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.9,
+      "locations": "Mandaue City"
+    },
+    {
+      "id": "1ph7qmf",
+      "title": "Pedestrian lance in Cebu City",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.9,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1piyah1",
+      "title": "Kakapoy na ba aning trapik sa CEBU RUSH HOURS AAAAAA!!!",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.75,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1pjwc22",
+      "title": "Cebu city transportation office",
+      "sentiment_score": -0.4461,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Cebu City, Guadalupe"
+    },
+    {
+      "id": "1plieaq",
+      "title": "Dugay maka book sa mga motor apps jusko",
+      "sentiment_score": -0.9025,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1pmjg68",
+      "title": "Outfit expectations sa IT park and the rest of Cebu?",
+      "sentiment_score": -0.6452,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Ayala (Business District), Cebu City, IT Park"
+    },
+    {
+      "id": "1pnmrh7",
+      "title": "G*at*y katong igka-Sabado, 4 hours amoang byahe from Lacion to Cordova",
+      "sentiment_score": -0.7069,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City, Mactan, Mandaue City"
+    },
+    {
+      "id": "1ponbck",
+      "title": "Pam opposes provisional approval of 600 EV Taxis",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1qeih0p",
+      "title": "Happy About the Small Things I’ve Done this Week",
+      "sentiment_score": -0.8394,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 1.0,
+      "locations": "Escario Street"
+    },
+    {
+      "id": "1qxjciy",
+      "title": "Thoughts on the new EV Taxi so far??",
+      "sentiment_score": -0.9545,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1qzcm7w",
+      "title": "Hit and Run sa may Streetscape",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Cebu City, Mandaue City"
+    },
+    {
+      "id": "1r2ubrw",
+      "title": "Free ride lagi pero di mo pasakyon: 01k Complaints",
+      "sentiment_score": -0.5369,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1r2h1yv",
+      "title": "What is happening in cebu traffic law enforcement???",
+      "sentiment_score": -0.7985,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Cebu City, SRP (South Road Properties)"
+    },
+    {
+      "id": "1r5bp23",
+      "title": "₱28.78 Billion later and the Cebu BRT stations already look worn?",
+      "sentiment_score": -0.3887,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1r78428",
+      "title": "Puryagaba ning traffic sa Cebu ba!",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 1.0,
+      "locations": "Carbon Market, Cebu City, Fuente Osmeña, Pier Area"
+    },
+    {
+      "id": "1rcmnbh",
+      "title": "New Route from Vallacar Transit Inc (Ceres) and Modern Jeep Cooperatives",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "A.S. Fortuna Street, Ayala (Business District), Banawa, Carbon Market, Cebu City, Consolacion, Hernan Cortes Street, IT Park, Labangon, Liloan, Mabolo, Mactan, Mandaue City, Talisay City"
+    },
+    {
+      "id": "1rdfck0",
+      "title": "Is Cebu becoming more commercialized while transportation barely improves?",
+      "sentiment_score": 0.5263,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1rjrsm2",
+      "title": "Bahalag traffic Way ayo Gobyerno basta kay wa lay gubat sa ato.",
+      "sentiment_score": -0.9747,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1rqvnc3",
+      "title": "Update: Major Cebu Projects and Their Costs (Infrastructure List)",
+      "sentiment_score": -0.5085,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Ayala (Business District), Cebu City, Mactan, SRP (South Road Properties)"
+    },
+    {
+      "id": "1rw15pk",
+      "title": "Tubo sa Pletehan nasad",
+      "sentiment_score": -1.0,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.6,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1ryeizs",
+      "title": "Did you pay extra today? Reminder: LTFRB fare hikes are officially suspended.",
+      "sentiment_score": -0.4,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.35,
+      "locations": "Cebu City, IT Park"
+    },
+    {
+      "id": "1s00xxp",
+      "title": "BRT including Jeepney",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Cebu City, Escario Street, Fuente Osmeña, Lahug"
+    },
+    {
+      "id": "1rzs8aq",
+      "title": "Yangungu about sa CBRC",
+      "sentiment_score": -0.8877,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.95,
+      "locations": "Cebu City, Jones Avenue, Urgello"
+    },
+    {
+      "id": "1s0yh6z",
+      "title": "Girl It’s So Confusing to Commute",
+      "sentiment_score": -0.21,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Fuente Osmeña"
+    },
+    {
+      "id": "1s0rvm5",
+      "title": "How hard is it to book grab car ride?",
+      "sentiment_score": 0.5785,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Cebu City, Mandaue City"
+    },
+    {
+      "id": "1s4v84i",
+      "title": "Today I learned that Cebu BRT route was supposed to start in Bulacao and end at Ayala Mall",
+      "sentiment_score": 0.0,
+      "sentiment_label": "neutral",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.0,
+      "locations": "Ayala (Business District), Ayala Mall, Bulacao, Cebu City, IT Park, Talamban"
+    },
+    {
+      "id": "1s63ctu",
+      "title": "Sa akong nabangga or na \"bump\" na sakyanan ganiha",
+      "sentiment_score": -0.7985,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.3,
+      "locations": "Bulacao, Pardo"
+    },
+    {
+      "id": "1s6nt8u",
+      "title": "PUVs already increasing their fares",
+      "sentiment_score": -0.5785,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "IT Park"
+    },
+    {
+      "id": "1s7qogh",
+      "title": "PH moves to cancel $85 million in Cebu BRT loans",
+      "sentiment_score": -0.5955,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.45,
+      "locations": "Capitol Site, Cebu City"
+    },
+    {
+      "id": "1sbd9lb",
+      "title": "Starbuks, Slater and Kryz",
+      "sentiment_score": -0.6452,
+      "sentiment_label": "negative",
+      "sarcasm_detected": true,
+      "sentiment_confidence": 0.5,
+      "locations": "Cebu City"
+    },
+    {
+      "id": "1sg9xbu",
+      "title": "Where to report taxi with fast timers?",
+      "sentiment_score": 0.5785,
+      "sentiment_label": "positive",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Unknown"
+    },
+    {
+      "id": "1siehi4",
+      "title": "Nganu daghan kaayo CCTO ron na active.",
+      "sentiment_score": -0.6321,
+      "sentiment_label": "negative",
+      "sarcasm_detected": false,
+      "sentiment_confidence": 0.15,
+      "locations": "Unknown"
+    }
+  ]
+}
