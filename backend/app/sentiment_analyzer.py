@@ -389,6 +389,72 @@ class CebuanoSentimentAnalyzer:
         }
 
     # ─────────────────────────────────────────────────────────────
+    # EMOTION DETECTION
+    # ─────────────────────────────────────────────────────────────
+    def detect_emotions(self, text: str, 
+                        sentiment_score: float,
+                        sarcasm_detected: bool) -> dict:
+        """
+        Multi-label emotion detection.
+        A single post can express multiple emotions simultaneously.
+        Based on sentiment score + keyword patterns.
+        """
+        text_lower = text.lower()
+        emotions = {}
+
+        # Anger — very strong negative sentiment
+        emotions["anger"] = sentiment_score <= -0.75
+
+        # Frustration — moderate negative (default for negative posts)
+        emotions["frustration"] = -0.75 < sentiment_score <= -0.3
+
+        # Sarcasm — already computed by sarcasm detector
+        emotions["sarcasm"] = sarcasm_detected
+
+        # Fear — safety/danger keywords
+        fear_keywords = [
+            "danger", "unsafe", "accident", "bangga", "disgrasya",
+            "nahadlok", "hadlok", "mahadlok", "crash", "patay",
+            "namatay", "nasakitan", "injured", "dangerous",
+            "risk", "risky", "baka", "mapuros",
+        ]
+        emotions["fear"] = any(kw in text_lower for kw in fear_keywords)
+
+        # Disgust — corruption/abuse keywords  
+        disgust_keywords = [
+            "corrupt", "corruption", "abuso", "kotong", "hulidap",
+            "palpak", "incompetent", "peke", "malicious", "anomalya",
+            "disgusting", "manggilaw", "lagay", "bribe", "extort",
+        ]
+        emotions["disgust"] = any(kw in text_lower for kw in disgust_keywords)
+
+        # Sadness — hopelessness/resignation keywords
+        sadness_keywords = [
+            "kapoy", "hopeless", "wala nay", "di na",
+            "nasubo", "sad", "lungkot", "hilak",
+            "naluha", "kinda sad", "dili na kaya",
+        ]
+        emotions["sadness"] = any(kw in text_lower for kw in sadness_keywords)
+
+        # Resignation — "normal na" patterns
+        resignation_keywords = [
+            "normal na", "wala nay mahimo", "sanay na",
+            "ganon talaga", "mao nay cebu", "mao na ni",
+            "what do you expect", "expected na",
+            "kanus-a pa kaha", "hahayz",
+        ]
+        emotions["resignation"] = any(kw in text_lower for kw in resignation_keywords)
+
+        # Trust/Approval — positive posts about enforcement working
+        emotions["trust"] = sentiment_score >= 0.35 and not sarcasm_detected
+
+        # Build summary list
+        active = [k for k, v in emotions.items() if v]
+        emotions["emotions_list"] = ", ".join(active) if active else "neutral"
+
+        return emotions
+
+    # ─────────────────────────────────────────────────────────────
     # BATCH ANALYSIS (convenience method for batch processor)
     # ─────────────────────────────────────────────────────────────
     def analyze_batch(self, texts: List[str]) -> List[Dict]:

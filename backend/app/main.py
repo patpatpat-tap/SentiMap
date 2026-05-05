@@ -191,6 +191,16 @@ def get_raw_data():
             record["sentiment_confidence"] = post.get("sentiment_confidence", 0.0)
             record["locations"] = locations
             
+            # Emotion fields
+            record["emotion_anger"] = post.get("emotion_anger", False)
+            record["emotion_frustration"] = post.get("emotion_frustration", False)
+            record["emotion_fear"] = post.get("emotion_fear", False)
+            record["emotion_disgust"] = post.get("emotion_disgust", False)
+            record["emotion_sadness"] = post.get("emotion_sadness", False)
+            record["emotion_resignation"] = post.get("emotion_resignation", False)
+            record["emotion_trust"] = post.get("emotion_trust", False)
+            record["emotions_list"] = post.get("emotions_list", "")
+            
             data_records.append(record)
         
         print(f"✓ Processed {len(data_records)} records from Supabase with NLP")
@@ -274,6 +284,17 @@ def get_statistics():
         avg_sentiment = round(sum(sentiment_scores) / len(sentiment_scores), 2) if sentiment_scores else 0.0
         sarcasm_percentage = round(100 * sarcasm_count / len(posts), 1) if len(posts) > 0 else 0.0
         
+        emotion_counts = {
+            "anger":       sum(1 for p in posts if p.get("emotion_anger")),
+            "frustration": sum(1 for p in posts if p.get("emotion_frustration")),
+            "fear":        sum(1 for p in posts if p.get("emotion_fear")),
+            "disgust":     sum(1 for p in posts if p.get("emotion_disgust")),
+            "sadness":     sum(1 for p in posts if p.get("emotion_sadness")),
+            "resignation": sum(1 for p in posts if p.get("emotion_resignation")),
+            "trust":       sum(1 for p in posts if p.get("emotion_trust")),
+            "sarcasm":     sum(1 for p in posts if p.get("sarcasm_detected")),
+        }
+        
         return {
             "status": "success",
             "total_grievances": len(posts),
@@ -281,6 +302,7 @@ def get_statistics():
             "avg_sentiment_score": avg_sentiment,
             "locations": location_stats,
             "sarcasm_percentage": sarcasm_percentage,
+            "emotion_counts": emotion_counts,
         }
         
     except Exception as e:

@@ -135,7 +135,7 @@ def process_all(dry_run: bool = False):
 
     print(f"\n  Processing {len(posts)} posts...\n")
     print(f"  {'#':>4}  {'S'}  {'Score':>7}  {'Sarc':>4}  {'Conf':>4}  Title")
-    print(f"  {'─'*4}  {'─'}  {'─'*7}  {'─'*4}  {'─'*4}  {'─'*50}")
+    print(f"  {'-'*4}  {'-'}  {'-'*7}  {'-'*4}  {'-'*4}  {'-'*50}")
 
     for i, post in enumerate(posts):
         pid      = post.get("id", "")
@@ -166,6 +166,8 @@ def process_all(dry_run: bool = False):
         triggers   = sentiment.get("sarcasm_triggers", [])
         intensifiers = sentiment.get("intensifiers_applied", [])
         negations    = sentiment.get("negations_applied", [])
+
+        emotions = analyzer.detect_emotions(nlp_text, float(score), sarcasm)
 
         sentiment_counts[label] = sentiment_counts.get(label, 0) + 1
         score_sum += score
@@ -198,6 +200,14 @@ def process_all(dry_run: bool = False):
                 "sentiment_confidence": round(float(confidence), 4),
                 "locations":            locations_str,
                 "platform":             "reddit",
+                "emotion_anger":         emotions["anger"],
+                "emotion_frustration":   emotions["frustration"],
+                "emotion_fear":          emotions["fear"],
+                "emotion_disgust":       emotions["disgust"],
+                "emotion_sadness":       emotions["sadness"],
+                "emotion_resignation":   emotions["resignation"],
+                "emotion_trust":         emotions["trust"],
+                "emotions_list":         emotions["emotions_list"],
             })
             if ok: success += 1
             else:  errors  += 1
@@ -274,193 +284,3 @@ if __name__ == "__main__":
 
     process_all(dry_run=args.dry_run)
 
-
-# ── PLACEHOLDER to satisfy file replacement ──
-"""
-SentiMap NLP Batch Processor
-==============================
-Pre-computes sentiment_score, sentiment_label, sarcasm_detected
-for all posts where is_clean=true, then writes results to Supabase.
-
-Run AFTER data_validator.py has marked your clean posts.
-
-Run:
-    python nlp_batch_processor.py
-"""
-
-import os
-import sys
-import time
-import requests
-from dotenv import load_dotenv
-
-# Add backend/app to path so we can import your NLP modules
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "app"))
-
-try:
-    from sentiment_analyzer import CebuanoSentimentAnalyzer
-    from location_extractor import CebuLocationExtractor
-    print("  [OK] NLP modules loaded")
-except ImportError as e:
-    print(f"  [ERROR] Could not load NLP modules: {e}")
-    print("  Make sure you run this from backend/scripts/ or adjust sys.path")
-    sys.exit(1)
-
-load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", "app", ".env"))
-
-SUPABASE_URL = os.getenv("SUPABASE_URL", "")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
-HEADERS = {
-    "apikey":        SUPABASE_KEY,
-    "Authorization": f"Bearer {SUPABASE_KEY}",
-    "Content-Type":  "application/json",
-}
-
-# Initialize your existing NLP modules
-sentiment_analyzer = CebuanoSentimentAnalyzer()
-location_extractor = CebuLocationExtractor()
-
-
-def load_clean_posts() -> list:
-    """Load only is_clean=true posts from Supabase."""
-    all_posts = []
-    offset = 0
-    limit  = 200
-
-    print("  Loading clean posts from Supabase...")
-    while True:
-        url = f"{SUPABASE_URL}/rest/v1/posts"
-        params = {
-            "select":   "id,title,body,full_text,comments_text",
-            "is_clean": "eq.true",
-            "offset":   offset,
-            "limit":    limit,
-        }
-        resp = requests.get(url, headers=HEADERS, params=params)
-        if resp.status_code != 200:
-            print(f"  ERROR: {resp.status_code} {resp.text}")
-            break
-        batch = resp.json()
-        if not batch:
-            break
-        all_posts.extend(batch)
-        offset += limit
-        if len(batch) < limit:
-            break
-
-    print(f"  Found {len(all_posts)} clean posts to process")
-    return all_posts
-
-
-def update_nlp_results(post_id: str, updates: dict) -> bool:
-    url = f"{SUPABASE_URL}/rest/v1/posts"
-    params = {"id": f"eq.{post_id}"}
-    resp = requests.patch(url, headers=HEADERS, params=params, json=updates)
-    return resp.status_code in (200, 204)
-
-
-def process_all():
-    print("=" * 55)
-    print("  SentiMap NLP Batch Processor")
-    print("  Processing is_clean=true posts only")
-    print("=" * 55)
-
-    posts = load_clean_posts()
-    if not posts:
-        print("\n  No clean posts found.")
-        print("  Run data_validator.py first to mark clean posts.")
-        return
-
-    success = 0
-    errors  = 0
-    sarcasm_count = 0
-    sentiment_counts = {"positive": 0, "neutral": 0, "negative": 0}
-
-    print(f"\n  Processing {len(posts)} posts...")
-    print(f"  (Using full_text = title + body — not title only)\n")
-
-    for i, post in enumerate(posts):
-        pid = post.get("id", "")
-
-        # Use full_text (title + body) — this is the critical fix
-        # Falls back to title if body is empty
-        nlp_text = (
-            post.get("full_text") or
-            ((post.get("title") or "") + " " + (post.get("body") or ""))
-        ).strip()
-
-        if not nlp_text:
-            continue
-
-        # Run your existing sentiment analyzer
-        try:
-            sentiment = sentiment_analyzer.analyze(nlp_text)
-        except Exception as e:
-            print(f"  [SKIP] {pid}: sentiment error — {e}")
-            errors += 1
-            continue
-
-        # Run your existing location extractor
-        try:
-            locations = location_extractor.extract(nlp_text)
-            locations_str = ", ".join(locations) if locations else "Unknown"
-        except Exception as e:
-            locations_str = "Unknown"
-
-        label = sentiment.get("sentiment_label", "neutral")
-        score = sentiment.get("sentiment_score", 0.0)
-        sarcasm = sentiment.get("sarcasm_detected", False)
-        confidence = sentiment.get("confidence", 0.0)
-
-        sentiment_counts[label] = sentiment_counts.get(label, 0) + 1
-        if sarcasm:
-            sarcasm_count += 1
-
-        # Write back to Supabase
-        updates = {
-            "sentiment_score":      round(float(score), 4),
-            "sentiment_label":      label,
-            "sarcasm_detected":     sarcasm,
-            "sentiment_confidence": round(float(confidence), 4),
-            "locations":            locations_str,
-            "platform":             "reddit",
-        }
-
-        ok = update_nlp_results(pid, updates)
-        if ok:
-            success += 1
-        else:
-            errors += 1
-
-        # Progress display
-        bar = "+" if label == "positive" else ("-" if label == "negative" else ".")
-        sarcasm_flag = " [SARCASM]" if sarcasm else ""
-        title_preview = (post.get("title") or "")[:55]
-        print(f"  [{i+1:>3}/{len(posts)}] {bar} {score:>6.3f}{sarcasm_flag} | {title_preview}")
-
-        # Polite delay to avoid hammering Supabase
-        time.sleep(0.1)
-
-    # ── FINAL REPORT ───────────────────────────────────────────
-    print(f"\n{'='*55}")
-    print(f"  NLP BATCH PROCESSING COMPLETE")
-    print(f"{'='*55}")
-    print(f"  Posts processed  : {len(posts)}")
-    print(f"  Successfully saved: {success}")
-    print(f"  Errors           : {errors}")
-    print(f"\n  Sentiment Breakdown:")
-    for label, count in sentiment_counts.items():
-        pct = round(100 * count / max(len(posts), 1))
-        bar = "█" * (pct // 3)
-        print(f"    {label:<10} {count:>4} ({pct:>2}%)  {bar}")
-    print(f"\n  Sarcasm detected : {sarcasm_count} posts "
-          f"({round(100*sarcasm_count/max(len(posts),1))}%)")
-    print(f"\n  Your Supabase posts table now has:")
-    print(f"    sentiment_score, sentiment_label, sarcasm_detected")
-    print(f"    all pre-computed from full_text (title + body)")
-    print(f"\n  NEXT: Update main.py to read these columns")
-    print(f"  instead of running NLP on every API request.")
-
-
-if __name__ == "__main__":
-    process_all()
