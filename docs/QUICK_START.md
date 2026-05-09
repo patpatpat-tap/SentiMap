@@ -232,7 +232,7 @@ d:\PROJECTS\SentiMap\backend\venv\Scripts\activate.bat
 ```
 
 ### Frontend showing "API unavailable"
-- ☑️ Backend running on http://127.0.0.1:8000?
+- ☑️ Backend running on http://127.0.0.1:8000?  
 - ☑️ Next.js rewrite configured in next.config.ts?
 - ☑️ Check browser console for error messages
 
