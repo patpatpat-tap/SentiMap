@@ -277,7 +277,6 @@ LOCATION_KEYWORDS = {
     "Carbon":           1, "Cebu City":        1,
 }
 
-
 # ═════════════════════════════════════════════════════════════
 # STEP 6: GUARANTEED_KEEP
 # Keywords so domain-specific to Cebu traffic enforcement that
@@ -323,7 +322,6 @@ GUARANTEED_KEEP_KEYWORDS = [
     # Road safety incidents
     "motorcycle accident",
 ]
-
 
 # ═════════════════════════════════════════════════════════════
 # STEP 2: ADMINISTRATIVE PATTERNS

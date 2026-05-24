@@ -1,0 +1,51 @@
+@startuml
+left to right direction
+skinparam componentStyle rectangle
+
+actor "Community User" as user
+actor "Analyst/Admin" as admin
+
+rectangle "Frontend (Next.js App Router)" as frontend {
+  [Map UI]
+  [Analytics Dashboard]
+  [Grievance Feed]
+}
+
+rectangle "Backend API (FastAPI)" as api {
+  [Request Router]
+  [Location Extractor]
+  [Sentiment Analyzer]
+  [Geospatial Clustering]
+  [Data Validator]
+}
+
+rectangle "Data Layer" as data {
+  database "Supabase (PostgreSQL)" as db
+  [Supabase REST API] as supabaseRest
+  [Supabase Storage] as supabaseStorage
+}
+
+rectangle "External Services" as ext {
+  [OpenStreetMap/Map Tiles] as tiles
+  [Reddit Data Source] as reddit
+}
+
+user --> frontend : browse map and analytics
+admin --> frontend : manage reports and QA
+
+frontend --> api : HTTPS JSON
+api --> supabaseRest : read/write
+supabaseRest --> db : SQL
+api --> supabaseStorage : upload/export files
+
+api --> tiles : fetch basemap
+frontend --> tiles : render tiles
+
+reddit --> api : batch ingestion
+
+note right of api
+NLP runs on
+Cebuano/Bislish text
+end note
+
+@enduml

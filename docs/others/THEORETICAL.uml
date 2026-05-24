@@ -1,0 +1,53 @@
+@startuml
+left to right direction
+skinparam componentStyle rectangle
+skinparam shadowing false
+
+actor "Public Users" as users
+actor "Analyst/Admin" as admin
+
+rectangle "Input" as input {
+  [Reddit Posts]
+}
+
+rectangle "Process" as process {
+  [Scrape]
+  [Validate]
+  [Analyze Text (NLP)]
+  [Map Locations]
+  [Cluster Hotspots]
+}
+
+rectangle "NLP" as nlp {
+  [Sentiment]
+  [Sarcasm]
+  [Emotions]
+}
+
+rectangle "Data Store" as data {
+  database "Supabase" as db
+}
+
+rectangle "Output" as output {
+  [Heatmap]
+  [Analytics]
+  [Grievance Feed]
+}
+
+users --> input : public posts
+input --> process : raw data
+process --> nlp : text signals
+nlp --> data : save results
+process --> data : save clean posts
+data --> output : dashboard data
+output --> admin : decisions
+
+note right of process
+Theoretical framework
+follows Input-Process-Output
+(IPO) model with NLP and
+geospatial analytics as
+core processing layers.
+end note
+
+@enduml
